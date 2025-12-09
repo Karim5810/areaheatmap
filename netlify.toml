@@ -1,0 +1,11 @@
+[build]
+  command = "python generate_heatmap.py"
+  publish = "."
+
+[context.production]
+  command = "python generate_heatmap.py"
+
+[[redirects]]
+  from = "/*"
+  to = "/heatmap.html"
+  status = 200
